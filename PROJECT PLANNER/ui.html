@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="continer">
+      <header>
+        <h1>project planner</h1>
+      </header>
+      <section class="inProgress">
+        <header class="inProgressHeader"><b>in progress</b></header>
+        <div>
+          <ul id="projectlist"></ul>
+        </div>
+      </section>
+      <section class="finished" id="finished2">
+        <header class="finishedheader"><b>completed</b></header>
+        <div>
+          <ul></ul>
+        </div>
+      </section>
+      <div class="buttons">
+        <button class="addOBJ" onclick="openForm()">Add project</button>
+        <span class="OPENSIDENEV" onclick="openNav()">How to use</span>
+      </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <div class="textuse">
+        <h2>How to use</h2>
+        <p class="Disclaimer">
+          <b>Disclaimer:</b>! This "project planner" is a demo; it is not meant
+          to be fully working for daily or professional use!
+        </p>
+        <h3>user manual</h3>
+        <p>
+          This app has three key features: <br />
+          - creating project items and filling out the project form<br />
+          - click the "complete" projects to "change" there status <br />
+          -deleting project items
+        </p>
+      </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+    </div>
+    <div class="black1" id="black1">
+      <section class="fillform" id="fillform">
+        <form class="projectForm">
+          <label for="projectName" class="label">Project Name</label>
+          <input
+            type="text"
+            class="input"
+            id="projectName"
+            name="projectName"
+          />
+          <label for="projectDescription" class="label"
+            >Project Description</label
+          >
+          <input
+            type="text"
+            class="input"
+            id="projectDescription"
+            name="projectDescription"
+          />
+          <label for="projectStartDate" class="label">Project Start Date</label>
+          <input
+            type="date"
+            id="projectStartDate"
+            class="input"
+            name="projectStartDate"
+          />
+          <label for="projectEndDate" class="label">Project End Date</label>
+          <input
+            type="date"
+            id="projectEndDate"
+            class="input"
+            name="projectEndDate"
+          />
+          <label for="projectPriority" class="label">Project Priority</label>
+          <input
+            type="text"
+            id="projectPriority"
+            class="input"
+            name="projectPriority"
+          />
+        </form>
+        <button class="submit" onclick="closeForm()">Submit</button>
+      </section>
+    </div>
+    <script src="sidenav.js"></script>
+    <script src="drag&drop.js"></script>
+    <script src="openform.js"></script>
+  </body>
+</html>
